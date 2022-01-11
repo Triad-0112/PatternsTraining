@@ -1,23 +1,16 @@
 //Problem
-double calculateTotal() {
-  double basePrice = quantity * itemPrice;
-  if (basePrice > 1000) {
-    return basePrice * 0.95;
+int discount(int inputVal, int quantity) {
+    if (quantity > 50) {
+      inputVal -= 2;
+    }
+    // ...
   }
-  else {
-    return basePrice * 0.98;
-  }
-}
 
 //Solution
-double calculateTotal() {
-  if (basePrice() > 1000) {
-    return basePrice() * 0.95;
+int discount(int inputVal, int quantity) {
+    int result = inputVal;
+    if (quantity > 50) {
+      result -= 2;
+    }
+    // ...
   }
-  else {
-    return basePrice() * 0.98;
-  }
-}
-double basePrice() {
-  return quantity * itemPrice;
-}

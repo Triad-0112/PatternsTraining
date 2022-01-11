@@ -1,4 +1,4 @@
-# InLine Temp Method
+# InLine Temp
 
 **PROBLEM** : You have a temporary variable that’s assigned the result of a simple expression and nothing more.
 **SOLUTION**: Replace the references to the variable with the expression itself.

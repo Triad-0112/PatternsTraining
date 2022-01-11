@@ -1,19 +1,14 @@
-#This can be extract into method. So whenever we need to reuse the code.
+#Case
 
-def calculateTotal():
-    basePrice = quantity * itemPrice
-    if basePrice > 1000:
-        return basePrice * 0.95
-    else:
-        return basePrice * 0.98
+def discount(inputVal, quantity):
+    if quantity > 50:
+        inputVal -= 2
+    # ...
     
-#This is how extract method work
+#Solution
 
-def calculateTotal():
-    if basePrice() > 1000:
-        return basePrice() * 0.95
-    else:
-        return basePrice() * 0.98
-
-def basePrice():
-    return quantity * itemPrice
+def discount(inputVal, quantity):
+    result = inputVal
+    if quantity > 50:
+        result -= 2
+    # ...

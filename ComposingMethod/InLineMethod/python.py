@@ -1,4 +1,4 @@
-#This can be extract into method. So whenever we need to reuse the code.
+#Case
 
 class PizzaDelivery:
     def getRating(self):
@@ -7,7 +7,7 @@ class PizzaDelivery:
     def moreThanFiveLateDeliveries(self):
         return self.numberOfLateDeliveries > 5
     
-#This is how extract method work
+#Solution
 
 class PizzaDelivery:
     def getRating(self):

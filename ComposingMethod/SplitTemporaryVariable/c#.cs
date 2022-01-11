@@ -1,31 +1,21 @@
 //Case
-double CalculateTotal() 
+int Discount(int inputVal, int quantity) 
 {
-  double basePrice = quantity * itemPrice;
-  
-  if (basePrice > 1000) 
+  if (quantity > 50) 
   {
-    return basePrice * 0.95;
+    inputVal -= 2;
   }
-  else 
-  {
-    return basePrice * 0.98;
-  }
+  // ...
 }
 
 //Solution
-double CalculateTotal() 
+int Discount(int inputVal, int quantity) 
 {
-  if (BasePrice() > 1000) 
+  int result = inputVal;
+  
+  if (quantity > 50) 
   {
-    return BasePrice() * 0.95;
+    result -= 2;
   }
-  else 
-  {
-    return BasePrice() * 0.98;
-  }
-}
-double BasePrice() 
-{
-  return quantity * itemPrice;
+  // ...
 }

@@ -1,4 +1,4 @@
-#This can be extract into method. So whenever we need to reuse the code.
+#Case
 
 def calculateTotal():
     basePrice = quantity * itemPrice
@@ -7,7 +7,7 @@ def calculateTotal():
     else:
         return basePrice * 0.98
     
-#This is how extract method work
+#Solution
 
 def calculateTotal():
     if basePrice() > 1000:

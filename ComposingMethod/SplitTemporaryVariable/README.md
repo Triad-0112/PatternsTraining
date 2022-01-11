@@ -1,4 +1,4 @@
-# InLine Temp Method
+# Split Temp With Query
 
 **PROBLEM** : You have a local variable that’s used to store various intermediate values inside a method (except for cycle variables).
 **SOLUTION**: Use different variables for different values. Each variable should be responsible for only one particular thing.
