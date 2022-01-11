@@ -1,40 +1,36 @@
 //Case
-public class Order 
+string FoundPerson(string[] people)
 {
-  // ...
-  public double Price() 
+  for (int i = 0; i < people.Length; i++) 
   {
-    double primaryBasePrice;
-    double secondaryBasePrice;
-    double tertiaryBasePrice;
-    // Perform long computation.
+    if (people[i].Equals("Don"))
+    {
+      return "Don";
+    }
+    if (people[i].Equals("John"))
+    {
+      return "John";
+    }
+    if (people[i].Equals("Kent"))
+    {
+      return "Kent";
+    }
   }
+  return String.Empty;
 }
 
 //Solution
-public class Order 
+string FoundPerson(string[] people)
 {
-  // ...
-  public double Price() 
-  {
-    return new PriceCalculator(this).Compute();
-  }
-}
-
-public class PriceCalculator 
-{
-  private double primaryBasePrice;
-  private double secondaryBasePrice;
-  private double tertiaryBasePrice;
+  List<string> candidates = new List<string>() {"Don", "John", "Kent"};
   
-  public PriceCalculator(Order order) 
+  for (int i = 0; i < people.Length; i++) 
   {
-    // Copy relevant information from the
-    // order object.
+    if (candidates.Contains(people[i])) 
+    {
+      return people[i];
+    }
   }
   
-  public double Compute() 
-  {
-    // Perform long computation.
-  }
+  return String.Empty;
 }

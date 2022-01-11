@@ -1,33 +1,26 @@
 //Problem
-class Order {
-  // ...
-  public function price() {
-    $primaryBasePrice = 10;
-    $secondaryBasePrice = 20;
-    $tertiaryBasePrice = 30;
-    // Perform long computation.
+function foundPerson(array $people){
+  for ($i = 0; $i < count($people); $i++) {
+    if ($people[$i] === "Don") {
+      return "Don";
+    }
+    if ($people[$i] === "John") {
+      return "John";
+    }
+    if ($people[$i] === "Kent") {
+      return "Kent";
+    }
   }
+  return "";
 }
 
 //Solution
-class Order {
-  // ...
-  public function price() {
-    return (new PriceCalculator($this))->compute();
+function foundPerson(array $people){
+  foreach (["Don", "John", "Kent"] as $needle) {
+    $id = array_search($needle, $people, true);
+    if ($id !== false) {
+      return $people[$id];
+    }
   }
-}
-
-class PriceCalculator {
-  private $primaryBasePrice;
-  private $secondaryBasePrice;
-  private $tertiaryBasePrice;
-  
-  public function __construct(Order $order) {
-      // Copy relevant information from the
-      // order object.
-  }
-  
-  public function compute() {
-    // Perform long computation.
-  }
+  return "";
 }
