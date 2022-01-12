@@ -53,6 +53,19 @@ func newMusket() iGun {
 		},
 	}
 }
+
+type Canon struct {
+	gun
+}
+
+func newCanon() iGun {
+	return &Musket{
+		gun: gun{
+			name:  "Canon",
+			power: 100,
+		},
+	}
+}
 func getGun(gunType string) (iGun, error) {
 	if gunType == "ak47" {
 		return newAk47(), nil
@@ -60,16 +73,21 @@ func getGun(gunType string) (iGun, error) {
 	if gunType == "musket" {
 		return newMusket(), nil
 	}
+	if gunType == "canon" {
+		return newCanon(), nil
+	}
 	return nil, fmt.Errorf("Wrong gun passed")
 }
 func main() {
 	ak47, _ := getGun("ak47")
 	musket, _ := getGun("musket")
+	canon, _ := getGun("canon")
 	printDetails(ak47)
 	printDetails(musket)
+	printDetails(canon)
 }
 
 func printDetails(g iGun) {
 	fmt.Printf("Gun: %s\n", g.getName())
-	fmt.Printf("Power: %d\n", g.getPower())
+	fmt.Printf("Power: %d\n\n", g.getPower())
 }
