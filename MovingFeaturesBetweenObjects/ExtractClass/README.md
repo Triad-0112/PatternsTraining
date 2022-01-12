@@ -1,4 +1,4 @@
-# Move Field
+# Extract Class
 
 **PROBLEM** : When one class does the work of two, awkwardness results.
 **SOLUTION**: Instead, create a new class and place the fields and methods responsible for the relevant functionality in it.
@@ -21,8 +21,19 @@ Classes always start out clear and easy to understand. They do their job and min
 If you “overdo it” with this refactoring technique, you will have to resort to **Inline Class**.
 
 ## EXAMPLE
-    Class1: ->   Class1:
-    aField       
+Person :
+    name
+    officeAreaCodee
+    officeNumber
+    getTelephoneNumber()
 
-    Class2: ->   Class2:
-                 aField
+Turn it into 
+
+Person :
+    name
+    getTelephoneNumber()
+
+Telephone Number :
+    officeAreaCode
+    officeNumber
+    getTelephoneNumber()
