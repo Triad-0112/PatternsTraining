@@ -29,3 +29,11 @@ Client Class :
     Department
         getManager()
 
+Turn it into :
+
+Client Class :
+
+    Person :
+        getManager()
+
+    Department
