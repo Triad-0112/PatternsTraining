@@ -22,6 +22,7 @@ If you “overdo it” with this refactoring technique, you will have to resort 
 
 ## EXAMPLE
 Person :
+
     name
     officeAreaCodee
     officeNumber
@@ -30,10 +31,12 @@ Person :
 Turn it into 
 
 Person :
+
     name
     getTelephoneNumber()
 
 Telephone Number :
+
     officeAreaCode
     officeNumber
     getTelephoneNumber()
